@@ -39,7 +39,7 @@ void FindN(vector<int> &vec, int left, int right ,int N)
         return;
     }
 
-    // 确定下标为index的数字是第几大
+    // 确定下标为index的数字是第几大,注意下标index与N大之间的关系
     int th = right - index + 1;
 
     if (th == N)
@@ -51,7 +51,7 @@ void FindN(vector<int> &vec, int left, int right ,int N)
     else if (th < N)
     {
         // 左边找
-        FindN(vec, left, index - 1, N -th);
+        FindN(vec, left, index - 1, N - th);
     }
     else if (th > N)
     {
